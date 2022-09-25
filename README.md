@@ -1,9 +1,9 @@
 # Wordpress-important-script
 
 Mobile App Build Using Wordpress Site
-https://www.youtube.com/watch?v=pYX-UNVvGA4
+<a href="https://www.youtube.com/watch?v=pYX-UNVvGA4" target="_blank">Click Me</a>
 Filter On Sale Product / Discount Product
-Ref: /** * WooCommerce Sales Sorting Filter * https://lakewood.media/woocommerce-add-sales-filter/ */ 
+Ref: /** * WooCommerce Sales Sorting Filter * <a href="https://lakewood.media/woocommerce-add-sales-filter/" target="_blank">Click Me</a>*/ 
 
 ```php
 
@@ -17,9 +17,11 @@ return $args;
 } 
 ```
 
-How to use the filter as a link to your sales items? This is pretty simple, you could place a menu link to your sales items pretty easily by simply adding the URL string to the end of your shop slug such as https://yourshop.com/products/?orderby=on_sale.
+#### How to use the filter as a link to your sales items? 
+This is pretty simple, you could place a menu link to your sales items pretty easily by simply adding the URL string to the end of your shop slug such as 
+<a href="https://yourshop.com/products/?orderby=on_sale" target="_blank">Click Me</a>.
 
-Wordpress Default User Create
+## Wordpress Default User Create
 
 ```php
 add_action( 'init', function () {
