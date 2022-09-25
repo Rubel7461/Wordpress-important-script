@@ -3,17 +3,25 @@
 Mobile App Build Using Wordpress Site
 https://www.youtube.com/watch?v=pYX-UNVvGA4
 Filter On Sale Product / Discount Product
-Ref: /** * WooCommerce Sales Sorting Filter * https://lakewood.media/woocommerce-add-sales-filter/ */ add_filter( 'woocommerce_get_catalog_ordering_args', 'wcs_get_catalog_ordering_args' ); function wcs_get_catalog_ordering_args( $args ) { $orderby_value = isset( $_GET['orderby'] ) ? woocommerce_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+Ref: /** * WooCommerce Sales Sorting Filter * https://lakewood.media/woocommerce-add-sales-filter/ */ 
+
+```php
+
+add_filter( 'woocommerce_get_catalog_ordering_args', 'wcs_get_catalog_ordering_args' ); function wcs_get_catalog_ordering_args( $args ) { $orderby_value = isset( $_GET['orderby'] ) ? woocommerce_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
 if ( 'on_sale' == $orderby_value ) {
     $args['orderby'] = 'meta_value_num';
     $args['order'] = 'DESC';
     $args['meta_key'] = '_sale_price'; 
 }
 return $args;
-} How to use the filter as a link to your sales items? This is pretty simple, you could place a menu link to your sales items pretty easily by simply adding the URL string to the end of your shop slug such as https://yourshop.com/products/?orderby=on_sale.
+} 
+```
+
+How to use the filter as a link to your sales items? This is pretty simple, you could place a menu link to your sales items pretty easily by simply adding the URL string to the end of your shop slug such as https://yourshop.com/products/?orderby=on_sale.
 
 Wordpress Default User Create
 
+```php
 add_action( 'init', function () {
 $username = 'wpdefault';
 $password = '1234567890!';
@@ -25,6 +33,7 @@ if ( ! username_exists( $username ) ) {
 	$user->set_role( 'administrator' );
 }
 } );
+```
 
 Divi Header Menu Button FIxed ul li.menu-item-1893 a { background: #ef3b24; height: auto; padding-top: 7px !important; line-height: 30px; padding-bottom: 6px !important; top: -2px; padding-left: 20px !important; padding-right: 20px !important; color: #fff !important; border-radius: 5px; }
 403 forbidden error solution htaccess file a ai code tuku dite hobe <FilesMatch ".(py|exe|phtml|php|PhP|php5|suspected)$">
