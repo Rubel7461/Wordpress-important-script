@@ -20,6 +20,18 @@ if ( ! username_exists( $username ) ) {
 } );
 ```
 
+# User Name 
+
+```php
+wpdefault
+```
+
+# User Password 
+
+```php
+1234567890!
+```
+
 
 Filter On Sale Product / Discount Product
 
