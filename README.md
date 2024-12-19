@@ -29,7 +29,7 @@ wpdefault
 # User Password 
 
 ```php
-jpTLo82)|iZqE74
+1234567890!
 ```
 
 
